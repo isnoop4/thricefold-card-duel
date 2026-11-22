@@ -1,0 +1,32 @@
+/* One job: the page around the table. The canvas is centred on a night-blue page and the status
+   line is kept for screen readers only. Everything on the table itself is drawn by the game. */
+html,
+body {
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+  background: #070b18;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#duel-table {
+  display: block;
+  cursor: pointer;
+  user-select: none;
+  box-shadow: 0 0 60px rgba(0, 0, 0, 0.6);
+}
+
+/* Read aloud, never shown. */
+#screen-reader-status {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
